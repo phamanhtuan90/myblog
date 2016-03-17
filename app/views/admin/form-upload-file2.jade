@@ -1,0 +1,21 @@
+extend layout
+block content
+	div#page-wrapper
+		div.row
+			div.col-lg-12
+				h1.page-header Forms
+		div.row
+			div.col-lg-12
+				div.panel-heading Basic Form Elements
+				div.panel-body
+					div.row
+						div.col-lg-6
+							form(role="form",method="POST",enctype="multipart/form-data")
+								div.form-group
+									label Static Control
+									input(type="file",name="file")
+									input(type="submit")
+								div.form-group
+									label Static Control
+									input(type="file",name="file2")
+									input(type="submit")

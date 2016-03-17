@@ -1,0 +1,36 @@
+extend ../layout
+block content
+	div#page-wrapper
+		div.row
+			div.col-lg-12
+				div.page-header(style="float:right")
+					a( class="btn btn-success",href="/admin/add-user") Add
+		div.row
+			div.col-lg-12
+				div.panel.panel-default
+					div.panel-heading List User
+					div.panel-body
+						if success == 'ok'
+							div(class="alert alert-success",role="alert")
+								strong Lưu danh mục thành công
+						div.table-responsive
+						table(class="table table-bordered table-striped")
+							thead
+								tr
+									th(style="width:15%") ID
+									th Username	
+									th Email
+									th Avatar
+							tbody
+								each user in listUser
+									tr
+										td #{user._id}
+										td
+											a(href="/admin/user/#{user._id}")  #{user.username}
+										td #{user.email}	
+										td 
+											img(src="/images/origin/#{user.avatar}",style="max-width:100px;max-height:100px")
+						div.col-sm-5(style="float:right")
+							if pageCount > 1
+								div.dataTables_paginate.paging_simple_numbers
+									|!{pagination}

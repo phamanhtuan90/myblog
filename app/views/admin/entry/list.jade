@@ -1,0 +1,40 @@
+extend ../layout
+block content
+	div#page-wrapper
+		div.row
+			div.col-lg-12
+				div.page-header(style="float:right")
+					a( class="btn btn-success",href="/admin/add-entry") Add Entry
+		div.row
+			div.col-lg-12
+				div.panel.panel-default
+					div.panel-heading List User
+					div.panel-body
+						if success == 'ok'
+							div(class="alert alert-success",role="alert")
+								strong Lưu bài viết thành công
+						div.table-responsive
+						table(class="table table-bordered table-striped")
+							thead
+								tr
+									th(style="width:15%") ID
+									th Title	
+									th Category
+									th Tác giả
+									th Ảnh
+							tbody
+								each entry in listEntry
+									tr
+										td #{entry._id}
+										td
+											a(href="/admin/entry/#{entry._id}")  #{entry.title}
+										td
+											a(href="/admin/category/#{entry.category._id}")  #{entry.category.title}
+										td
+											a(href="/admin/user/#{entry.author._id}")  #{entry.author.username}			
+										td 
+											img(src="/images/origin/#{entry.img}",style="max-width:100px;max-height:100px")
+						div.col-sm-5(style="float:right")
+							if pageCount > 1
+								div.dataTables_paginate.paging_simple_numbers
+									|!{pagination}

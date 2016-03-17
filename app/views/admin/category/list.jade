@@ -1,0 +1,33 @@
+extend ../layout
+block content
+	div#page-wrapper
+		div.row
+			div.col-lg-12
+				div.page-header(style="float:right")
+					a( class="btn btn-success",href="/admin/add-category") Add
+		div.row
+			div.col-lg-12
+				div.panel.panel-default
+					div.panel-heading List Category
+					div.panel-body
+						if success == 'ok'
+							div(class="alert alert-success",role="alert")
+								strong Lưu danh mục thành công
+						div.table-responsive
+						table(class="table table-bordered table-striped")
+							thead
+								tr
+									th(style="width:15%")
+										|ID
+									th
+										|Title
+							tbody
+								each category, i in list
+									tr
+										td #{category._id}
+										td 
+											a(href="/admin/category/#{category._id}")  #{category.title}
+						div.col-sm-5(style="float:right")
+							if pageCount > 1
+								div.dataTables_paginate.paging_simple_numbers
+									|!{pagination}

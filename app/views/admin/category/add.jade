@@ -1,0 +1,19 @@
+extend ../layout
+block content
+	div#page-wrapper
+		div.row
+			div.col-lg-12
+				h1.page-header Forms
+		div.row
+			div.col-lg-12
+				div.panel-heading Add Category
+				div.panel-body
+					div.row
+						div.col-lg-6
+							form(role="form",method="POST")
+								div.form-group
+									label Category Name
+									input(class="form-control",placeholder="Nhập tên catogory",name="title")
+									p.help-block  Nhập tên category
+								button(type="submit",class="btn btn-default") Add
+								button(type="reset",class="btn btn-default",style="margin-left:10px;") Reset

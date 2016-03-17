@@ -1,0 +1,24 @@
+
+doctype html
+html
+	head
+		title day chi la demo | vai lon nhi
+		meta('charset="utf-8"')
+		meta('name="viewport"',content="width=device-width, initial-scale=1")
+		link(rel="stylesheet",href="/css/admin/bootstrap.min.css")
+		link(rel="stylesheet",href="/css/admin/metisMenu.min.css")
+		link(rel="stylesheet",href="/css/admin/sb-admin-2.css")
+		link(rel="stylesheet",href="/css/admin/font-awesome.css")
+		
+	body
+		div#wrapper
+			include ./includes/nav-header
+			block content
+	script(src="/js/admin/jquery.min.js")
+	script(src="/js/admin/bootstrap.min.js")
+	script(src="/js/admin/metisMenu.min.js")				
+	script(src="/js/admin/sb-admin-2.js")
+	script(src="/socket.io/socket.io.js")
+	script(src="/js/app.js")
+
+	

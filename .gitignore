@@ -1,0 +1,4 @@
+storage/sessions/*
+node_modules
+storage
+.idea

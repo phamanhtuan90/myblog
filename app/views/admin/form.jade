@@ -1,0 +1,44 @@
+extend layout
+block content
+	div#page-wrapper
+		div.row
+			div.col-lg-12
+				h1.page-header Forms
+		div.row
+			div.col-lg-12
+				div.panel-heading Basic Form Elements
+				div.panel-body
+					div.row
+						div.col-lg-6
+							form(role="form")
+								div.form-group
+									label Input Demo
+									input(class="form-control")
+									p.help-block  Example block-level help text here
+								div.form-group
+									label Static Control
+									input(class="form-control",placeholder="Enter text")
+									p.help-block  Example block-level help text here
+								div.form-group
+									label Email
+									p.help-block  email@example.com
+								div.form-group
+									label Static Control
+									input(type="file")
+								div.form-group
+									label Textare
+									textarea(class="form-control",rows="3")
+								div.form-group
+									label Checkbox
+									div.checkbox
+										label
+											input(type="checkbox",value="")
+											| Check Box 1
+									div.checkbox
+										label
+											input(type="checkbox",value="")
+											| Check Box 1
+									div.checkbox
+										label
+											input(type="checkbox",value="")
+											| Check Box 1

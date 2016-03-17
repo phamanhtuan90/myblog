@@ -1,0 +1,42 @@
+extend ../layout
+block content
+	div#page-wrapper
+		div.row
+			div.col-lg-12
+				h1.page-header Forms Add User
+		div.row
+			div.col-lg-12
+				div.panel-body
+					div.row
+						div.col-lg-6
+							if errors
+								each error in errors
+									div(class="alert alert-success",role="alert")
+										strong #{error.param}
+										| :  #{error.msg}
+					div.row
+						div.col-lg-6
+							form(role="form",method="POST",enctype="multipart/form-data",action='/admin/add-user')
+								div.form-group
+									label User Name
+									input(class="form-control",placeholder="Username",name="username")
+									p.help-block  Nhập tên user của bạn
+								div.form-group
+									label Password
+									input(type="password",class="form-control",placeholder="password",name="password")
+									p.help-block  Nhập password của bạn	
+								div.form-group
+									label Re-Password
+									input(type="password",class="form-control",placeholder="password",name="re-password")
+									p.help-block  Nhập re-password của bạn
+								div.form-group
+									label Avatar
+									input(type="file",name="avatar")
+									p.help-block  Chọn avatar của bạn
+								div.form-group
+									label Email
+									input(class="form-control",placeholder="Email",name="email")
+									p.help-block  Nhập email của bạn		
+
+								button(type="submit",class="btn btn-default") Add
+								button(type="reset",class="btn btn-default",style="margin-left:10px;") Reset

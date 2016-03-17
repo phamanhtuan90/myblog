@@ -1,0 +1,125 @@
+nav.navbar.navbar-default.navbar-static-top(role="navigation",style="margin-bottom: 0")
+	div.navbar-header
+		button(type="button",class="nav-bar-toggle",role="navigation",stype="margin-bottom:0")
+			span.sr-only Toggle navigation
+			span.icon-bar
+			span.icon-bar
+			span.icon-bar
+		a.navbar-brand(href="#") SB ADmin demo
+	ul.nav.navbar-top-links.navbar-right
+		li.dropdown
+			a(class="dropdown-toggle",data-toggle="dropdown",href="#")
+				i.fa.fa-envelope.fa-fw
+				i.fa.fa-caret-down
+			ul.dropdown-menu.dropdown-messages
+				-   for (var i = 0; i< 3; i++)
+					li
+						a(href="#")
+							div
+								strong John Smith
+								span.pull-right.text-muted
+									em Yesterday
+							div Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...
+					li.divider
+				li
+					a.text-center(href="#")
+						strong Read All Messages
+						i.fa.fa-angle-right
+		li.dropdown
+			a(class="dropdown-toggle",data-toggle="dropdown",href="#")
+				i.fa.fa-tasks.fa-fw
+				i.fa.fa-caret-down
+			ul.dropdown-menu.dropdown-tasks
+				li
+					a(href="#")
+						div
+							p
+								strong Task 1
+								span.pull-right.text-muted 40% complete
+							div.progress.progress-striped.active
+								div(class="progress-bar progress-bar-success",role="progressbar",aria-valuenow="40",aria-valuemin="0",aria-valuemax="100",style="width: 40%")
+									span.sr-only 40% Complete(success)			
+				li.divider
+				li
+					a(href="#")
+						div
+							p
+								strong Task 1
+								span.pull-right.text-muted 40% complete
+							div.progress.progress-striped.active
+								div(class="progress-bar progress-bar-warning",role="progressbar",aria-valuenow="40",aria-valuemin="0",aria-valuemax="100",style="width: 60%")
+									span.sr-only 40% Complete(warning)			
+				li.divider
+				li
+					a(href="#")
+						div
+							p
+								strong Task 1
+								span.pull-right.text-muted 50% complete
+							div.progress.progress-striped.active
+								div(class="progress-bar progress-bar-danger",role="progressbar",aria-valuenow="40",aria-valuemin="0",aria-valuemax="100",style="width: 50%")
+									span.sr-only 40% Complete(success)			
+				li.divider
+				li
+					a(href="#")
+						div
+							p
+								strong Task 1
+								span.pull-right.text-muted 80% complete
+							div.progress.progress-striped.active
+								div(class="progress-bar progress-bar-info",role="progressbar",aria-valuenow="40",aria-valuemin="0",aria-valuemax="100",style="width: 80%")
+									span.sr-only 40% Complete(success)			
+				li.divider
+				li
+					a(class="text-center",href="#")
+						strong See All Tasks
+						i.fa.fa-angle-right
+	div(class="navbar-default sidebar",role="navigation")
+		div(class="sidebar-nav navbar-collapse")
+			ul.nav#side-menu
+				li.sidebar-search
+					div.input-group.custom-search-form
+						input(type="text",class="form-control",placeholder="Search...")
+						span(class="input-group-btn")
+							button.btn.btn-default(type="button")
+								i.fa.fa-search
+				li
+					a(href="/admin/list-category")
+						i.fa.fa-dashboard.fa-fw
+						| Category
+				li
+					a(href="/admin/list-user")
+						i.fa.fa-table.fa-fw
+						| User
+				li
+					a(href="/admin/list-entry")
+						i.fa.fa-edit.fa-fw
+						| Entry
+				li
+					a(href="/chat")
+						i.fa.fa-bar-chart.fa-fw
+						| Chat
+				li
+					a(href="#")
+						i.fa.fa-dashboard.fa-fw
+						| Dashboard
+				li
+					a(href="#")
+						i.fa.fa-table.fa-fw
+						| Tables
+				li
+					a(href="#")
+						i.fa.fa-edit.fa-fw
+						| Forms
+				li
+					a(href="#")
+						i.fa.fa-bar-chart.fa-fw
+						| Chart
+				li
+					a(href="#")
+						i.fa.fa-wrench.fa-fw
+						| Wrench		
+				li
+					a(href="#")
+						i.fa.fa-sitemap.fa-fw
+						| Sitemap 						

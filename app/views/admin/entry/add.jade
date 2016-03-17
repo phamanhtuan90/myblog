@@ -1,0 +1,45 @@
+extend ../layout
+block content
+	div#page-wrapper
+		div.row
+			div.col-lg-12
+				h1.page-header Forms Add Entry
+		div.row
+			div.col-lg-12
+				div.panel-body
+					div.row
+						div.col-lg-6
+							if errors
+								each error in errors
+									div(class="alert alert-success",role="alert")
+										strong #{error.param}
+										| :  #{error.msg}
+					div.row
+						div.col-lg-6
+							form(role="form",method="POST",enctype="multipart/form-data",action='/admin/add-entry')
+								div.form-group
+									label Tiêu đề
+									input(class="form-control",placeholder="Tiêu đề",name="title")
+									p.help-block  Tiêu đề
+								div.form-group
+									label Ảnh bài viết
+									input(type="file",name="img")
+									p.help-block  Chọn ảnh của của bài viết
+								div.form-group
+									label Danh mục
+									select(class="form-control",name="category")
+										option(value="") ----Chọn danh mục----
+										each category, i in listCategory
+											option(value="#{category._id}") #{category.title}
+									p.help-block  Chọn danh mục	
+								div.form-group
+									label Description
+									input(type="text",class="form-control",placeholder="Description",name="description")
+									p.help-block  Nhập mô tả bài viết	
+								div.form-group
+									label Nội dung
+									textarea(class="form-control",name="content")
+									p.help-block  Nhập nội dung của bài viết		
+
+								button(type="submit",class="btn btn-default") Add
+								button(type="reset",class="btn btn-default",style="margin-left:10px;") Reset

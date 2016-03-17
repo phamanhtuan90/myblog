@@ -1,0 +1,32 @@
+extend layout
+block content
+	div.body-wrapper
+		div(class="room-wrapper panel")
+			div.panel-heading
+				h3 CHAT DEMO
+			div.panel-body
+				div.scrollableArea
+					div.scrollableAreaWrap
+						div.scrollableAreaContent
+							ul.message-room-list
+				div.send-message-form
+					div.body-form
+						form(id="room-form",name="room-form",action="",method="post",onsubmit="return false;")
+							div.textarea
+								textarea(placeholder="Write your message...",name="room_message_content",id="room_message_content",rows="5")
+							div.btn
+								button(type="submit",class="btn",id="roomSendBtn")	Send		
+		div(class="friends-wrapper panel")
+			div.panel-heading
+				span.auth Hello,
+					span(id="authName") #{user.username}
+				a(id="logoutBtn",class="logout",href="javascript:;") Logout
+			div.panel-body
+				ul(class="users-list",id="friendsList")
+					each friend in listFriend
+						li(class="user")
+							a
+								span.img
+									img(alt="#{friend.avatar}",src="/images/32x32/#{friend.avatar}")
+								span.name #{friend.username}
+								span(class="status") OK

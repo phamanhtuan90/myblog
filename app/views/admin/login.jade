@@ -1,0 +1,34 @@
+doctype html
+html
+	head
+		title day chi la demo | vai lon nhi
+		meta('charset="utf-8"')
+		meta('name="viewport"',content="width=device-width, initial-scale=1")
+		link(rel="stylesheet",href="/css/admin/bootstrap.min.css")
+		link(rel="stylesheet",href="/css/admin/metisMenu.min.css")
+		link(rel="stylesheet",href="/css/admin/sb-admin-2.css")
+		link(rel="stylesheet",href="/css/admin/font-awesome.css")
+		
+	body
+		div.container
+			div.row
+				div(class="col-md-4 col-md-offset-4")
+					div(class="login-panel panel panel-default")
+						div.panel-heading
+							h3.panel-title Please Sign In
+						div.panel-body
+							form(method="POST",name="login")
+								fieldset
+									div.form-group
+										input(class="form-control",placeholder="username",name="username",type="text")
+									div.form-group
+										input(class="form-control",placeholder="password",name="password",type="password")
+									div.checkbox
+										label
+											input(name="remember",type="checkbox",value="remember") 
+											|Remember
+									input(type="submit",class="btn btn-lg btn-success btn-block",value="Login")
+	script(src="/js/admin/jquery.min.js")
+	script(src="/js/admin/bootstrap.min.js")
+	script(src="/js/admin/metisMenu.min.js")				
+	script(src="/js/admin/sb-admin-2.js")
